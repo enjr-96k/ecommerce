@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mega mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onscroll="closeD()" onload="loaded()">
+<i id="leftHand" class="fa fa-hand-o-left lefthand"></i>
+<div id="nav">
+      <button class="btn" onclick="closeD()">X</button>
+      <ul>
+      
+      <h1>Categories</h1>
+        <li>Cosmetics</li>
+        <li>Stationary</li>
+        <li>Foods</li>
+        <li>Fashion</li>
+       <li>Kitchen</li>
+       <li>Personal Care</li>
+       
+    </ul>
+    
+</div>
+
+<div onclick="modalc()"  class="bodym" id="bodym">
+
+</div>
+
+<div id="modal" class="modal">
+<img src="avatar.jpg">
+    
+<h1>Aqua JD</h1>
+</div>
+
+    <div id="navbar">
+    <div id="left">
+    <i onclick="openD()" class="fa fa-bars"></i>
+    <h2>iMart</h2>
+    <h4>Wadad 205</h4>
+    <button id="green">Visit now</button>
+    </div>
+    <div id="right">
+    <i onclick="modal()" class="fa fa-user-circle-o user"></i>
+    </div>
+    <div id="search"><input class="search" type="text" placeholder="stationary, fruits, etc....."><i class="fa fa-search"></i></div>
+    </div>
+ 
+    
+    <div id="box1">
+     
+        <div id="box_content"><img src="prdt1.jpg"alt="thumbnail"><h2>Add to cart</h2></div>
+        <div id="box_content"><img src="prdt2.jpg"alt="thumbnail"><h2>Add to cart</h2></div>
+        <div id="box_content"><img src="prdt3.jpg"alt="thumbnail"><h2>Add to cart</h2></div>
+        <div id="box_content"><img src="prdt4.jpg"alt="thumbnail"><h2>Add to cart</h2></div>
+        <div id="box_content"><img src="prdt5.jpg"alt="thumbnail"><h2>Add to cart</h2></div>
+        <div id="box_content"><img src="prdt6.jpg"alt="thumbnail"><h2>Add to cart</h2></div>
+        <div id="box_content"><img src="prdt7.jpg"alt="thumbnail"><h2>Add to cart</h2></div>
+        <div id="box_content"><img src="prdt8.jpg"alt="thumbnail"><h2>Add to cart</h2></div>
+       <div id="box_content"><img src="prdt9.jpg"alt="thumbnail"><h2>Add to cart</h2></div> 
+    </div>
+   <div id="fruit">
+    <button id="close" onclick="closeIt()"><i class="fa fa-times"></i></button>
+    <h1>Order Fresh fruits direct from Farm</h1>
+    <button class="btn">Order Now <i class="fa fa-angle-double-right"></i></button>
+    </div>    
+    
+    <h1 style="padding:10px 40px;">Shop By Categories :-</h1>
+    <div id="container">
+    
+       <div id="product"><img src="cat8.jpg"><h3>Detergents</h3></div>
+       <div id="product"><img src="cat1.jpg"><h3>Cosmetics</h3></div>
+       <div id="product"><img src="cat2.jpg"><h3>Biscuits & Cookies</h3></div>
+       <div id="product"><img src="cat3.jpg"><h3>Oil</h3></div>
+       <div id="product"><img src="cat4.jpg"><h3>Breakfast</h3></div>
+       <div id="product"><img src="cat5.jpg"><h3>Hygines</h3></div>
+        <div id="product"><img src="cat6.jpg"><h3>Bathroom Cleaners</h3></div>
+       <div id="product"><img src="cat7.jpg"><h3>Tea Powder</h3></div>
+       <div id="product"><img src="cat9.jpg"><h3>Salts</h3></div>
+       <div id="product"><img src="cat10.jpg"><h3>Soaps</h3></div>
+       <div id="product"><img src="cat11.jpg"><h3>Perfume & Deo</h3></div>
+       <div id="product"><img src="cat12.jpg"><h3>Personal Care</h3></div>
+    </div>
+    
+    <h1 style="padding:0px 40px;"> Our Services :-</h1>
+    
+    <div id="box2">
+    
+        <div id="box_content1"><img src="srv1.jpg"alt="thumbnail"><h2>Fast & Safe delivery</h2></div>
+        
+        <div id="box_content1"><img src="srv2.jpg"alt="thumbnai"><h2>Online Payment</h2></div>
+      
+        <div id="box_content1"><img src="srv3.jpg"alt="thumbnail"><h2>Freh Fruit</h2></div>
+        
+        <div id="box_content1"><img src="srv4.jpg"alt="thumbnail"><h2>24×7 Service</h2></div>
+        
+    </div>
+        
+</body>
+
+
+
+<style>
+.bodym{
+		width:100vw;
+		height:11500px;;
+		position: absolute;
+		top:0px;
+		margin:0px;
+		background:rgba(0,0,0,0.8);
+		z-index:2;
+		display:none;
+		bottom:0px;
+		}
+
+.modal{
+		position: relative;
+		top:50px;
+		width:80%;
+		left:10%;
+		z-index:3;
+		display:none;
+	
+		}
+		
+.modal img {
+		width:250px;
+		height:250px;
+		border-radius:50%;
+		position: absolute;
+		left:50%;
+		transform: translate(-50%);}
+.modal h1{
+		color:#fff;
+		position: absolute;
+		top:250px;
+		font-weight: bold;
+			left:50%;
+		transform: translate(-50%, -6px);}
+
+
+#leftHand{
+				font-size:50px;
+				position: absolute;
+				top:270px;
+				z-index:1;
+				border-radius:50%;
+				color:#fff;
+				padding:12px;
+				background:rgba(0,0,0,0.6);
+				right:50px;
+			
+				}
+.lefthand{
+				animation: move 1s infinite;}
+body{
+				background:#fff;
+				margin:0px;
+				padding:0px;
+				}
+
+#nav{
+				position: fixed;
+				width:0px;
+				height:100%;
+				background:rgba(0,0,0,1);
+				top:0px;
+				z-index:3;
+				overflow:hidden;
+				transition:.4s;
+				background:inherit;	
+				}
+				
+	#nav:before{
+					content:"";
+							position: absolute;
+						background:inherit;
+							top:0;
+							left:0;
+							width:100%;
+							height:100%;
+						 filter:blur(10px);
+					//box-shadow: inset 0 0 0 3500px rgba(0,0,0,.5);}
+					
+#nav .btn{
+				position: absolute;
+				margin-top:10px;
+				right:20px;
+				font-size:35px;
+				border:none;
+				outline:none;
+				color:#999999;
+				background:rgba(0,0,0,0);
+				font-weight:bold;}
+#nav ul{
+				position: absolute;
+				top:50px;
+				left:20px;}
+#nav ul li {
+				color:#999999;
+				font-size:25px;
+				padding:5px;}
+				
+#nav ul li:hover{
+				color:#000;}						
+				
+#navbar{
+				position: fixed;
+				top:0px;
+				z-index:1;
+				margin:0px 0px;
+				width:100vw;
+				height:120px;
+				background: linear-gradient(to left,#ff8900,#ff0045);
+				display:flex;
+				animation: colour 1s infinite;
+				}
+#left{
+				position: absolute;
+				left:20px;
+				top:20px;
+				width:50%;
+				color:#fff;
+				margin:5px 10px;
+				}
+#left h2,#left h4{
+				color:#fff;
+				padding:0px;
+				margin:5px 35px;
+				}
+#left #green{
+				-webkit-appearance:none;
+				margin:5px 35.0px;
+				background:#00ff54;
+				border-radius:10px;
+				width:80px;
+				color:#000;
+				font-weight:bold;
+				font-weight: bold;
+				border:none;
+				outline:none;}
+#left i{
+				color:#fff;
+				position: absolute;
+				left:0px;
+				top:30px;
+				font-size:30px;
+				}
+#right{
+				position: absolute;
+				right:30px;
+				color:#fff;
+				display:flex;
+				align-items: center;
+				
+				}
+#right .user{
+				font-size:30px;
+				text-align: center;
+				position: fixed;
+				top:40px;
+				right:30px;
+				border-radius:50%;
+				border: 0px solid #fff;
+				padding:0px;
+				animation: border 1s  2;
+				box-shadow: 0px 0px  0px 0px #fff;}
+				
+#navbar #search{
+				position: absolute;
+				width:80%;
+				height:35px;
+				background:#fff;
+				bottom:-25px;
+				left:10%;
+				border-radius:20px;
+				
+				box-shadow: 0px 3px 20px -6px #000;}
+				
+#navbar #search .search{
+				position: absolute;
+				left:15px;
+				width:80%;
+				background: transparent;
+				outline:none;
+				height:100%;
+				border:none;
+				}
+#navbar #search i{
+				position: absolute;
+				right:10px;
+		  	padding:5px;
+				top:5px;
+				
+				width:15px;
+				height:15px;
+				border-radius:50%;}			
+				
+#navbar #search i:hover{
+				color:#fff;
+        background:#333;
+        	
+					}
+#box1{
+				width:auto;
+				height:300px;
+				display:flex;
+				flex-direction:row;
+				background:#fff;
+				margin:140px auto 20px;
+				align-items: center;
+				overflow: auto;
+				position: relative;
+				transition: all 1s ease-in-out;
+				}
+	
+					
+#box_content{
+				height:250px;
+				min-width:200px;
+				border-radius:20px;
+				margin:auto 20px; 
+				box-shadow: 5px 5px 20px -5px #666; 
+				position: relative;
+				overflow:hidden;     
+				animation:slide 2s  1;
+				}
+#box_content img{
+				width:100%;
+				height:220px;
+				}				
+				
+#box_content h2{
+				width:100%;
+				position: absolute;
+		  	bottom:-20px;
+		  	height:30px;
+				text-align: center;
+				background:#ff4500;
+				padding:5px 0px;
+				color:#fff;
+				border-radius:0px 0px 20px 20px;}
+				
+#container{
+    				width:0vw;
+    				margin:30px 0;
+    				display:grid;
+    				grid-template-columns:repeat(3, 1fr);
+    				grid-template-rows:repeat(4, 200px);
+    				grid-gap:40px;
+    				height:auto;
+    				transition: 1s ease-in-out;
+    				opacity:.1;
+    				transform: scale(.1);
+    				}
+    #product{
+    				box-shadow: 5px 5px 20px -5px #666; 
+    				position: relative;
+    				border-radius:20px;
+    				overflow:hidden;
+    				}
+   #product img{
+   				width:100%;
+   				height:100%;
+   				border-radius:20px;
+   				}
+  #product h3{
+   				width:100%;
+   				padding:5px 0px;
+   			  position: absolute;
+		  	  bottom:-20px;
+		  	  text-align: center;
+		  	  background:#ffa000;
+		  	  color:#000;
+		  	  font-weight:bold;
+   				} 				
+#fruit{
+				postion: relative;
+ 				width:90%;
+ 				height:400px;
+ 				background: url("fruit2.jpg")  no-repeat center center/cover ;
+ 				overflow:hidden;
+ 				margin:20px auto;
+ 				box-shadow: 5px 5px 20px -5px #666;
+ 				transition:2s;
+ 				 padding:20px;
+ 				 border-radius:20px;
+ 				 backface-visibility:hidden;
+ 				 transform:rotateY(180deg);
+ 				 transform-style:preserve-3d;
+ 				 transform-origin: left;}  	
+ 			
+					
+ #fruit h1{
+ 				color:#fff;
+ 				font-weight:bold;
+ 				text-align: center;
+ 				height:50px;
+ 				margin-top:18%;
+ 				}
+ #fruit .btn{
+ 				color:#fff;
+ 				border:2px solid #fff;
+ 				background: transparent;
+ 				padding:5px 10px;
+ 				font-weight:bold;
+ 				min-width:90px;
+ 				margin:0px calc(50% - 45px);}				
+ 							
+ #fruit #close{
+ 				   float:right;
+ 				   background:#000;
+ 				   color:#fff;
+ 				   padding:5px 5px;
+ 				   outline:none;
+ 				   font-weight:bold;
+ 				   width:25px;
+ 				   height:25px;
+ 				   border:none;
+ 				   border-radius:50%;}  				
+ #box2{
+				width:auto;
+				height:200px;
+				display:flex;
+				flex-direction:row;
+				background:#fff;
+				margin:20px auto;
+				align-items: center;
+				overflow: auto;
+			 transition: all .6s ease-in-out;
+			opacity:0;
+			transform:scale( .1);
+				}  
+	.active{
+			opacity:1;
+			transform:scale(1);
+			}
+#box_content1{
+				height:150px;
+				min-width:200px;
+				border:2px solid #ffe400;
+				border-radius:20px;
+				margin:30px 20px;
+				box-shadow: 5px 5px 20px -5px #666; 
+				position: relative;
+				overflow:hidden;           
+				}			
+#box_content1 img{
+				width:100%;
+				height:120px;
+				}								
+				
+	#box_content1 h2{
+				width:100%;
+				position: absolute;
+		  	bottom:-20px;
+		  	height:30px;
+				text-align: center;
+				background:#ffe400;
+				padding:5px 0px;
+				color:#000;
+				border-radius:0px 0px 20px 20px;}			
+@keyframes border{
+		1%{
+				box-shadow: 0px 0px  0px 0px #fff;}
+		
+		100%{
+				box-shadow: 0px 0px  30px 20px #fff;}
+				}				
+@keyframes slide{
+		0%{
+				   transform: translateX(0px)}
+		  50%{
+		  	   	transform: translateX(-900px)}
+		  	   	}				
+		100%{
+				transform: translateX(0px)	     }		
+@keyframes move{
+					from{
+									transform: translateX(30px);}
+					to{
+									transform: translateX(-10px);}				
+									}				
+//	@keyframes colour{
+					14.3%{
+			 background: linear-gradient(to left,#fffb00, #ffb700);		
+									}
+					28.6%{
+				background: linear-gradient(to left, #7aff00,#fffb00);	}
+					43.8%{ background:linear-gradient(toleft,#00f4ff,#7aff00);						}		
+					57.4{
+			background:	linear-gradient(to left, #0026ff,#00f4ff);
+									}		
+						71%{
+		background:	linear-gradient(to left, #be00ff,#0026ff);								}		
+						84.3%{
+			background:	linear-gradient(to left, #ec00ff,#a700ff);						}
+					100%{
+			background:	linear-gradient(to left, #ff0045,#ff00e4);						}
+										
+					}
+												
+									
+   		@media(max-width: 768px) {
+#container{
+			   		grid-template-columns:repeat(2, 1fr);
+    				grid-template-rows:repeat(6, 150px);
+    				grid-gap:30px;
+								}
+#fruit{
+ 				width:80%;
+ 				height:200px;								
+				}
+#leftHand{
+				font-size:25px;
+				padding:5px;
+			
+				}
+
+</style>
+
+<script>
+function closeIt(){
+			remove =	document.getElementById("fruit");
+				remove.remove();
+				div = document.getElementById("box2");
+         if(div.offsetTop < window.innerHeight )
+     {
+      //  div.classList.add("active");
+      // document.getElementById("fruit").style.background="red";
+      div.style.opacity="1";
+      div.style.transform="scale(1)";
+       }
+      else{
+       		  div.style.opacity=".1";
+      div.style.transform="scale(.1)";
+             }}
+				
+function openD()
+{
+				let	x = 	document.getElementById("nav");	
+				x.style.width="250px";
+		let bodym = 	document.getElementById("bodym");
+		bodym.style.display =" block";
+				}
+			function closeD()
+{
+			let	nav = 	document.getElementById("nav");	
+				nav.style.width="0px";
+				let bodym = 	document.getElementById("bodym");
+		bodym.style.display =" none";
+		
+	let modal = 	document.getElementById("modal");
+		modal.style.display =" none";		
+		
+		
+	//		let	navbar = 	document.getElementById("navbar");	
+	//			navbar.style.position="fixed"	
+				}	
+	function dontMove(){
+					document.getElementById("leftHand").style.display="none";}						
+		setTimeout(dontMove, 4000);
+</script>
+<script>
+
+function modal(){
+	let bodym = 	document.getElementById("bodym");
+		bodym.style.display =" block";
+		
+	let modal = 	document.getElementById("modal");
+		modal.style.display =" flex";	
+		}
+
+function modalc(){
+	let bodym = 	document.getElementById("bodym");
+		bodym.style.display =" none";
+		let	nav = 	document.getElementById("nav");	
+				nav.style.width="0px";
+	let modal = 	document.getElementById("modal");
+		modal.style.display =" none";		
+		}
+</script>
+<script>
+window.addEventListener('scroll', function() {
+     div = document.getElementById("box2");
+     //div1 = document.getElementById("box1");
+     // dflt = div.innerWidth
+    console.log(div.offsetTop);
+ //    console.log(div.getBoundingClientRect().top);
+   
+   
+     
+     if(div.getBoundingClientRect().top < window.innerHeight-50 || div.offsetTop < window.innerHeight )
+     {
+      //  div.classList.add("active");
+      // document.getElementById("fruit").style.background="red";
+      div.style.opacity="1";
+      div.style.transform="scale(1)";
+       }
+      else{
+       		  div.style.opacity=".1";
+      div.style.transform="scale(.1)";
+             }
+  /* //   if(div1.getBoundingClientRect().top < window.innerHeight-50 )
+     {
+      //  div.classList.add("active");
+      // document.getElementById("fruit").style.background="red";
+      div1.style.opacity="1";
+      div1.style.transform="scale(1)";
+      div1.style.margin="140px auto 20px"
+     // alert(div1.style.margin)
+       }
+   //   else{
+       		  div1.style.opacity=".1";
+      div1.style.transform="scale(.1)";
+      div1.style.margin="140px 2000px 20px"
+             }       
+      */
+        });
+        
+    function loaded(){
+    		div = document.getElementById("container");
+    		div.style.opacity="1";
+    		div.style.transform=" scale(1)";
+    		div.style.margin="30px auto";
+    		div.style.width="95vw";
+    		div1 = document.getElementById("fruit");
+    		div1.style.transform="rotateY(0deg)";
+    		}
+    		
+</script>
+
+</html>
